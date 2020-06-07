@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="11.744713">
+<testcase classname="CloudCurrencyAPITestFeature.feature" name="Validate auth token and create conversion" time="3.686081">
+<failure message="org.json.JSONException: JSONObject[&quot;client_buy_amount&quot;] not found.&#13;&#10;&#9;at org.json.JSONObject.get(JSONObject.java:572)&#13;&#10;&#9;at com.util.TestUtil.getValueByJPath(TestUtil.java:13)&#13;&#10;&#9;at com.tests.MakeCurrencyConversionApiTest.makeCurrencyConversion(MakeCurrencyConversionApiTest.java:56)&#13;&#10;&#9;at stepDefinitions.APITestSteps.i_create_conversion_with(APITestSteps.java:58)&#13;&#10;&#9;at ✽.And I create conversion with &quot;USD&quot; &quot;GBP&quot; 1500 &quot;sell&quot; &quot;test&quot;(D:/Selenium/SeleniumTestNGConcept/BDDScenarioContextProject/src/test/java/Features/CloudCurrencyAPITestFeature.feature:8)&#13;&#10;"><![CDATA[When I setup the url for generate auth token................................passed
+When I generate auth token using valid userid and api key...................passed
+Then I Validate the response code is 200 and auth token is generated........passed
+When I setup the url for create conversion..................................passed
+And I create conversion with "USD" "GBP" 1500 "sell" "test".................failed
+Then I Validate the response code is 200....................................skipped
+And I validate amount is 2241...............................................skipped
+
+StackTrace:
+org.json.JSONException: JSONObject["client_buy_amount"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at com.util.TestUtil.getValueByJPath(TestUtil.java:13)
+	at com.tests.MakeCurrencyConversionApiTest.makeCurrencyConversion(MakeCurrencyConversionApiTest.java:56)
+	at stepDefinitions.APITestSteps.i_create_conversion_with(APITestSteps.java:58)
+	at ✽.And I create conversion with "USD" "GBP" 1500 "sell" "test"(D:/Selenium/SeleniumTestNGConcept/BDDScenarioContextProject/src/test/java/Features/CloudCurrencyAPITestFeature.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="CloudCurrencyAPITestFeature.feature" name="Negative scenario to make  conversion without sell_currency" time="2.301162">
+<system-out><![CDATA[When I setup the url for generate auth token................................passed
+When I generate auth token using valid userid and api key...................passed
+Then I Validate the response code is 200 and auth token is generated........passed
+When I setup the url for create conversion..................................passed
+And Without "sell_currency" create conversion with "USD" "" 1500 "sell" "test".passed
+Then I Validate the response code is 400....................................passed
+And I Validate message is "sell_currency is not a valid ISO 4217 currency code".passed
+]]></system-out>
+</testcase>
+<testcase classname="CloudCurrencyAPITestFeature.feature" name="Negative scenario to make  conversion without buy_currency" time="1.880128">
+<system-out><![CDATA[When I setup the url for generate auth token................................passed
+When I generate auth token using valid userid and api key...................passed
+Then I Validate the response code is 200 and auth token is generated........passed
+When I setup the url for create conversion..................................passed
+And Without "buy_currency" create conversion with "" "GBP" 1500 "sell" "test".passed
+Then I Validate the response code is 400....................................passed
+And I Validate message is "buy_currency is not a valid ISO 4217 currency code".passed
+]]></system-out>
+</testcase>
+<testcase classname="CloudCurrencyAPITestFeature.feature" name="Negative scenario to make  conversion without fixed side" time="1.883943">
+<system-out><![CDATA[When I setup the url for generate auth token................................passed
+When I generate auth token using valid userid and api key...................passed
+Then I Validate the response code is 200 and auth token is generated........passed
+When I setup the url for create conversion..................................passed
+And Without "fixed_side" create conversion with "USD" "GBP" 1500 "" "test"..passed
+Then I Validate the response code is 400....................................passed
+And I Validate message is "fixed_side should be in range: buy, sell"........passed
+]]></system-out>
+</testcase>
+<testcase classname="CloudCurrencyAPITestFeature.feature" name="Negative scenario to make  conversion without amount" time="1.993399">
+<system-out><![CDATA[When I setup the url for generate auth token................................passed
+When I generate auth token using valid userid and api key...................passed
+Then I Validate the response code is 200 and auth token is generated........passed
+When I setup the url for create conversion..................................passed
+And Without "amount" create conversion with "USD" "GBP" 0 "sell" "test".....passed
+Then I Validate the response code is 400....................................passed
+And I Validate message is "The amount can not be negative or zero"..........passed
+]]></system-out>
+</testcase>
+</testsuite>
