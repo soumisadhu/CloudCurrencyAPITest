@@ -55,7 +55,7 @@ public class APITestSteps {
 	public void i_create_conversion_with(String buy_currency, String sell_currency, int amount, String fixed_side,
 			String reason) throws ClientProtocolException, IOException {
 		String auth_token = (String) testContext.scenarioContext.getContext(Context.AUTH_TOKEN);
-		int responseAmount=currencyConversionTest.makeCurrencyConversion(buy_currency, sell_currency, amount, reason, fixed_side,
+		String responseAmount=currencyConversionTest.makeCurrencyConversion(buy_currency, sell_currency, amount, reason, fixed_side,
 				auth_token);
 		testContext.scenarioContext.setContext(Context.AMOUNT, responseAmount);
 	}
@@ -81,9 +81,9 @@ public class APITestSteps {
 		Assert.assertEquals(msg, error_msg);
 	}
 	
-	@Then("^I validate amount is (\\d+)$")
-	public void i_validate_amount_is(int expectedAmount){
-		int amount = (int) testContext.scenarioContext.getContext(Context.AMOUNT);
+	@Then("^I validate amount is \"([^\"]*)\"$")
+	public void i_validate_amount_is(String expectedAmount){
+		String amount = (String) testContext.scenarioContext.getContext(Context.AMOUNT);
 		Assert.assertEquals(expectedAmount, amount);
 	}
 

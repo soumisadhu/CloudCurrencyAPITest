@@ -46,7 +46,7 @@ formatter.step({
 });
 formatter.step({
   "line": 10,
-  "name": "I validate amount is 2241",
+  "name": "I validate amount is \"2111.85\"",
   "keyword": "And "
 });
 formatter.examples({
@@ -127,21 +127,21 @@ formatter.step({
 });
 formatter.step({
   "line": 10,
-  "name": "I validate amount is 2241",
+  "name": "I validate amount is \"2111.85\"",
   "keyword": "And "
 });
 formatter.match({
   "location": "APITestSteps.i_setup_the_url_for_generate_auth_token()"
 });
 formatter.result({
-  "duration": 195234764,
+  "duration": 138338911,
   "status": "passed"
 });
 formatter.match({
   "location": "APITestSteps.i_generate_auth_token_using_valid_userid_and_api_key()"
 });
 formatter.result({
-  "duration": 2941566129,
+  "duration": 3284420252,
   "status": "passed"
 });
 formatter.match({
@@ -154,14 +154,14 @@ formatter.match({
   "location": "APITestSteps.i_Validate_the_response_code_is_and_auth_token_is_generated(int)"
 });
 formatter.result({
-  "duration": 3883275,
+  "duration": 3827338,
   "status": "passed"
 });
 formatter.match({
   "location": "APITestSteps.i_setup_the_url_for_create_conversion()"
 });
 formatter.result({
-  "duration": 82110,
+  "duration": 129836,
   "status": "passed"
 });
 formatter.match({
@@ -190,9 +190,8 @@ formatter.match({
   "location": "APITestSteps.i_create_conversion_with(String,String,int,String,String)"
 });
 formatter.result({
-  "duration": 545315052,
-  "error_message": "org.json.JSONException: JSONObject[\"client_buy_amount\"] not found.\r\n\tat org.json.JSONObject.get(JSONObject.java:572)\r\n\tat com.util.TestUtil.getValueByJPath(TestUtil.java:13)\r\n\tat com.tests.MakeCurrencyConversionApiTest.makeCurrencyConversion(MakeCurrencyConversionApiTest.java:56)\r\n\tat stepDefinitions.APITestSteps.i_create_conversion_with(APITestSteps.java:58)\r\n\tat ✽.And I create conversion with \"USD\" \"GBP\" 1500 \"sell\" \"test\"(D:/Selenium/SeleniumTestNGConcept/BDDScenarioContextProject/src/test/java/Features/CloudCurrencyAPITestFeature.feature:8)\r\n",
-  "status": "failed"
+  "duration": 1723853839,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -204,19 +203,21 @@ formatter.match({
   "location": "APITestSteps.i_Validate_the_response_code_is_and_creation_quote_is_failed_with(int)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 249409,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "2241",
-      "offset": 21
+      "val": "2111.85",
+      "offset": 22
     }
   ],
-  "location": "APITestSteps.i_validate_amount_is(int)"
+  "location": "APITestSteps.i_validate_amount_is(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 241197,
+  "status": "passed"
 });
 formatter.scenarioOutline({
   "line": 17,
@@ -349,14 +350,14 @@ formatter.match({
   "location": "APITestSteps.i_setup_the_url_for_generate_auth_token()"
 });
 formatter.result({
-  "duration": 1295794,
+  "duration": 2276491,
   "status": "passed"
 });
 formatter.match({
   "location": "APITestSteps.i_generate_auth_token_using_valid_userid_and_api_key()"
 });
 formatter.result({
-  "duration": 1620582435,
+  "duration": 2050124370,
   "status": "passed"
 });
 formatter.match({
@@ -369,14 +370,14 @@ formatter.match({
   "location": "APITestSteps.i_Validate_the_response_code_is_and_auth_token_is_generated(int)"
 });
 formatter.result({
-  "duration": 203222,
+  "duration": 241198,
   "status": "passed"
 });
 formatter.match({
   "location": "APITestSteps.i_setup_the_url_for_create_conversion()"
 });
 formatter.result({
-  "duration": 93400,
+  "duration": 70819,
   "status": "passed"
 });
 formatter.match({
@@ -409,7 +410,7 @@ formatter.match({
   "location": "APITestSteps.without_create_conversion_with(String,String,String,int,String,String)"
 });
 formatter.result({
-  "duration": 678586256,
+  "duration": 701423525,
   "status": "passed"
 });
 formatter.match({
@@ -422,7 +423,7 @@ formatter.match({
   "location": "APITestSteps.i_Validate_the_response_code_is_and_creation_quote_is_failed_with(int)"
 });
 formatter.result({
-  "duration": 216564,
+  "duration": 187313,
   "status": "passed"
 });
 formatter.match({
@@ -435,7 +436,7 @@ formatter.match({
   "location": "APITestSteps.i_Validate_message_is(String)"
 });
 formatter.result({
-  "duration": 184747,
+  "duration": 133428,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -569,14 +570,14 @@ formatter.match({
   "location": "APITestSteps.i_setup_the_url_for_generate_auth_token()"
 });
 formatter.result({
-  "duration": 1034069,
+  "duration": 2781979,
   "status": "passed"
 });
 formatter.match({
   "location": "APITestSteps.i_generate_auth_token_using_valid_userid_and_api_key()"
 });
 formatter.result({
-  "duration": 1574474254,
+  "duration": 2340010048,
   "status": "passed"
 });
 formatter.match({
@@ -589,14 +590,14 @@ formatter.match({
   "location": "APITestSteps.i_Validate_the_response_code_is_and_auth_token_is_generated(int)"
 });
 formatter.result({
-  "duration": 242223,
+  "duration": 255053,
   "status": "passed"
 });
 formatter.match({
   "location": "APITestSteps.i_setup_the_url_for_create_conversion()"
 });
 formatter.result({
-  "duration": 64148,
+  "duration": 94940,
   "status": "passed"
 });
 formatter.match({
@@ -629,7 +630,7 @@ formatter.match({
   "location": "APITestSteps.without_create_conversion_with(String,String,String,int,String,String)"
 });
 formatter.result({
-  "duration": 304053704,
+  "duration": 1101847314,
   "status": "passed"
 });
 formatter.match({
@@ -642,7 +643,7 @@ formatter.match({
   "location": "APITestSteps.i_Validate_the_response_code_is_and_creation_quote_is_failed_with(int)"
 });
 formatter.result({
-  "duration": 175509,
+  "duration": 233500,
   "status": "passed"
 });
 formatter.match({
@@ -655,7 +656,7 @@ formatter.match({
   "location": "APITestSteps.i_Validate_message_is(String)"
 });
 formatter.result({
-  "duration": 84163,
+  "duration": 160113,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -789,14 +790,14 @@ formatter.match({
   "location": "APITestSteps.i_setup_the_url_for_generate_auth_token()"
 });
 formatter.result({
-  "duration": 1106941,
+  "duration": 1600625,
   "status": "passed"
 });
 formatter.match({
   "location": "APITestSteps.i_generate_auth_token_using_valid_userid_and_api_key()"
 });
 formatter.result({
-  "duration": 1550266779,
+  "duration": 3044128824,
   "status": "passed"
 });
 formatter.match({
@@ -809,14 +810,14 @@ formatter.match({
   "location": "APITestSteps.i_Validate_the_response_code_is_and_auth_token_is_generated(int)"
 });
 formatter.result({
-  "duration": 139587,
+  "duration": 181154,
   "status": "passed"
 });
 formatter.match({
   "location": "APITestSteps.i_setup_the_url_for_create_conversion()"
 });
 formatter.result({
-  "duration": 89294,
+  "duration": 79543,
   "status": "passed"
 });
 formatter.match({
@@ -849,7 +850,7 @@ formatter.match({
   "location": "APITestSteps.without_create_conversion_with(String,String,String,int,String,String)"
 });
 formatter.result({
-  "duration": 332018210,
+  "duration": 2235405388,
   "status": "passed"
 });
 formatter.match({
@@ -862,7 +863,7 @@ formatter.match({
   "location": "APITestSteps.i_Validate_the_response_code_is_and_creation_quote_is_failed_with(int)"
 });
 formatter.result({
-  "duration": 184233,
+  "duration": 235039,
   "status": "passed"
 });
 formatter.match({
@@ -875,7 +876,7 @@ formatter.match({
   "location": "APITestSteps.i_Validate_message_is(String)"
 });
 formatter.result({
-  "duration": 138046,
+  "duration": 122652,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1009,14 +1010,14 @@ formatter.match({
   "location": "APITestSteps.i_setup_the_url_for_generate_auth_token()"
 });
 formatter.result({
-  "duration": 2497161,
+  "duration": 2550019,
   "status": "passed"
 });
 formatter.match({
   "location": "APITestSteps.i_generate_auth_token_using_valid_userid_and_api_key()"
 });
 formatter.result({
-  "duration": 1573781454,
+  "duration": 2927996991,
   "status": "passed"
 });
 formatter.match({
@@ -1029,14 +1030,14 @@ formatter.match({
   "location": "APITestSteps.i_Validate_the_response_code_is_and_auth_token_is_generated(int)"
 });
 formatter.result({
-  "duration": 275581,
+  "duration": 184234,
   "status": "passed"
 });
 formatter.match({
   "location": "APITestSteps.i_setup_the_url_for_create_conversion()"
 });
 formatter.result({
-  "duration": 64149,
+  "duration": 59529,
   "status": "passed"
 });
 formatter.match({
@@ -1069,7 +1070,7 @@ formatter.match({
   "location": "APITestSteps.without_create_conversion_with(String,String,String,int,String,String)"
 });
 formatter.result({
-  "duration": 416561934,
+  "duration": 2667019054,
   "status": "passed"
 });
 formatter.match({
@@ -1082,7 +1083,7 @@ formatter.match({
   "location": "APITestSteps.i_Validate_the_response_code_is_and_creation_quote_is_failed_with(int)"
 });
 formatter.result({
-  "duration": 125217,
+  "duration": 288923,
   "status": "passed"
 });
 formatter.match({
@@ -1095,7 +1096,7 @@ formatter.match({
   "location": "APITestSteps.i_Validate_message_is(String)"
 });
 formatter.result({
-  "duration": 93913,
+  "duration": 185773,
   "status": "passed"
 });
 });

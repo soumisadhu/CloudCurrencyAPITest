@@ -38,7 +38,7 @@ public class MakeCurrencyConversionApiTest extends GenerateTokenApiTest {
 		apiUrl = url + serviceUrl;
 	}
 
-	public int makeCurrencyConversion(String buy_currency, String sell_currency, int amount, String reason,
+	public String makeCurrencyConversion(String buy_currency, String sell_currency, int amount, String reason,
 			String fixed_side, String auth_token) throws ClientProtocolException, IOException {
 
 		HashMap<String, String> headerMap = new HashMap<String, String>();
@@ -53,7 +53,7 @@ public class MakeCurrencyConversionApiTest extends GenerateTokenApiTest {
 		closebaleHttpResponse = client.post(apiUrl, jsonString, headerMap);
 		String responseString = EntityUtils.toString(closebaleHttpResponse.getEntity(), "UTF-8");
 		JSONObject responseJson = new JSONObject(responseString);
-		int client_buy_amount = Integer.parseInt(TestUtil.getValueByJPath(responseJson, "/client_buy_amount"));
+		String client_buy_amount = TestUtil.getValueByJPath(responseJson, "/client_buy_amount");
 
 		/*
 		 * responsePayload =

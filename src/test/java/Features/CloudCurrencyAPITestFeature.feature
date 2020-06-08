@@ -7,7 +7,7 @@ Then I Validate the response code is 200 and auth token is generated
 When I setup the url for create conversion 
 And I create conversion with "<buy_currency>" "<sell_currency>" <amount> "<fixed_side>" "<reason>"
 Then I Validate the response code is 200
-And I validate amount is 2241
+And I validate amount is "2111.85"
 
 Examples: 
 |buy_currency|sell_currency|amount|fixed_side|reason|
